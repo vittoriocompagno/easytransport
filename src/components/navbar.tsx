@@ -13,7 +13,7 @@ const navigation = [
   { name: "Preventivo", href: "#calculator" },
   { name: "Contatti", href: "#contact" },
 ]
-
+//lines for git
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
