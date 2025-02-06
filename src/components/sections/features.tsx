@@ -69,7 +69,7 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
+        <div className="grid gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16 px-4">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
@@ -83,18 +83,18 @@ export function Features() {
                   "animation-delay-300"
                 )}
               >
-                <Card className="card-hover relative p-8 bg-white h-full flex flex-col">
+                <Card className="card-hover relative p-6 bg-white h-full flex flex-col">
                   <div className={cn(
-                    "w-12 h-12 rounded-lg mb-6 flex items-center justify-center",
+                    "w-10 h-10 rounded-lg mb-4 flex items-center justify-center",
                     feature.color
                   )}>
-                    <Icon className="w-6 h-6" strokeWidth={1.5} />
+                    <Icon className="w-5 h-5" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 mb-6 flex-grow">{feature.description}</p>
+                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4 flex-grow text-sm">{feature.description}</p>
                   <Button 
                     variant="ghost" 
-                    className="group justify-start hover:text-primary p-0 h-auto font-medium text-gray-700"
+                    className="group justify-start hover:text-primary p-0 h-auto font-medium text-gray-700 text-sm"
                   >
                     Scopri di più
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -105,24 +105,24 @@ export function Features() {
           })}
         </div>
 
-        <div className="relative rounded-3xl overflow-hidden animate-fade-in-up animation-delay-450">
+        <div className="relative rounded-3xl overflow-hidden animate-fade-in-up animation-delay-450 mx-4">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800" />
           <div className="absolute inset-0 bg-grid-pattern-light bg-grid" />
-          <div className="relative p-8 md:p-12">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="relative p-6 md:p-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
                   Pronto a semplificare le tue spedizioni?
                 </h3>
-                <p className="text-lg text-gray-300">
+                <p className="text-base text-gray-300">
                   Calcola il tuo preventivo gratuito oggi stesso e scopri quanto è facile spedire con EasyTransport
                 </p>
               </div>
-              <div className="flex gap-4">
+              <div className="flex flex-col md:flex-row w-full md:w-auto gap-3">
                 <ScrollButton 
                   targetId="calculator"
                   size="lg" 
-                  className="button-primary h-14 hover-glow"
+                  className="button-primary h-11 w-full md:w-auto hover-glow"
                 >
                   Calcola preventivo
                 </ScrollButton>
@@ -130,7 +130,7 @@ export function Features() {
                   targetId="contact"
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-gray-900 rounded-full px-8 h-14 bg-white/10"
+                  className="border-white text-white hover:bg-white hover:text-gray-900 rounded-full h-11 w-full md:w-auto bg-white/10"
                 >
                   Contattaci
                 </ScrollButton>
